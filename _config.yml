@@ -1,0 +1,25 @@
+# set the title for your project
+title: Project Documentation
+# set the description for your project - BE BRIEF
+description: A gh-pages framework for handling project documentation and progess.
+
+permalink: none
+
+# set baseurl to your project name, the repo name
+# on enterprise (internal) github this base url pattern is used: /pages/[user-or-org]/[repo-name]
+baseurl: /pages/awolfe76/project-documentation
+
+# use kramdown and Github Flavored Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# setting scope for /documents/gate so that all pages have a tag of 'gate' and use the layout 'gate_document'
+defaults:
+  -
+    scope:
+        path: "documents/gate"
+        type: "pages"
+    values:
+        layout: "gate_document"
+        tags: "doc gate"
